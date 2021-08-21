@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Login & Register</title>
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="title-text">
+            <div class="title login">
+                Login Form
+            </div>
+            <div class="title signup">
+                Register form
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Register</label>
+                <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+                <form action="#" class="login" id="login">
+                    <div class="field">
+                        <input type="text" id="username" placeholder="User name" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="pass-link">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" onclick="getInfo()" value="Login">
+                    </div>
+                    <div class="signup-link">
+                        Not a member? <a href="">Signup now</a>
+                    </div>
+                </form>
+                <form action="#" class="signup" id="sigup">
+                    <div class="field">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" id="newUsername" placeholder="newUsername" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" id="newPassword" name="password" placeholder="newPassword" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" id="rePassword" placeholder="Confirm password" required>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" onclick="registerUser()" value="Signup">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="infor"></div>
+    <p id="inforname"></p>
+    <button id="logout" onclick="logout()">Log out</button>
+    <script src="./main.js"></script>
+</body>
+
+</html>
