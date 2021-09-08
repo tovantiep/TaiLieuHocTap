@@ -25,7 +25,7 @@ body {
 .wrapper {
     overflow: hidden;
     max-width: 390px;
-    background: no-repeat;
+    background: white;
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
@@ -102,11 +102,11 @@ input[type="radio"] {
     color: #000;
 }
 
-#login:checked~label.signup {
+#frmlogin:checked~label.signup {
     color: #000;
 }
 
-#login:checked~label.login {
+#frmlogin:checked~label.login {
     cursor: default;
     user-select: none;
 }
@@ -159,7 +159,7 @@ form .field input:focus::placeholder {
 }
 
 .form-inner form .pass-link {
-    margin-top: 5px;
+    margin-top: 25px;
 }
 
 .form-inner form .signup-link {
@@ -218,4 +218,21 @@ form .btn input[type="submit"] {
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: small;
+}
+
+.error-message {
+    color: red;
+    font-size: small;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    font-size: small;
+    text-align: center;
 }
