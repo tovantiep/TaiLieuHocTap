@@ -36,8 +36,7 @@ $(document).ready(function() {
                 $('#wrapper').css('display', 'none');
                 $('#infor').css('display', 'block');
                 $('#logout').css('display', 'block');
-                $('#inforname').html('welcome -' + username);
-                success = [i];
+                $('#inforname').html('Welcome - ' + username);
             } else if (username == '' || password == '') {
                 //
             } else {
@@ -72,6 +71,14 @@ $(document).ready(function() {
                     username: newUsername,
                     password: newPassword
                 }
+                for (i = 0; i < objPeople.length; i++) {
+                    if (newUsername == objPeople[i].username) {
+                        myText = $("#error-message").text("Tài khoản đã tồn tại");
+                        $('#error-message').css('display', 'block');
+                        $('#success-message').css('display', 'none');
+                        return;
+                    }
+                }
                 objPeople.push(newUser);
                 console.log(objPeople);
                 myText = $("#success-message").text("Đăng kí thành công");
@@ -81,12 +88,14 @@ $(document).ready(function() {
             }
 
         }
+
     });
     $('#logout').click(function() {
         $('#wrapper').css('display', 'block');
         $('#infor').css('display', 'none');
         $('#logout').css('display', 'none');
         $('#inforname').css('display', 'none');
+        $('#error-message').css('display', 'none');
         $('#form-inner').trigger(reset);
     });
     $("#frmlogin").validate({

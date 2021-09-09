@@ -236,3 +236,10 @@ form .btn input[type="submit"] {
     font-size: small;
     text-align: center;
 }
+
+button {
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: rgb(133, 133, 136);
+}
